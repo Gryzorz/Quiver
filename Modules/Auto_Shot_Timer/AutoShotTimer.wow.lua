@@ -188,6 +188,7 @@ local updateBarReload = function()
 	local r, g, b = unpack(store.ColorReload)
 	frame.BarAutoShot:SetBackdropColor(r, g, b, 0.8)
 	local percentCompleted = timeReload.GetPercentCompleted()
+	Quiver.remainingBeforeRed = timeReload.GetRemaining()
 	if percentCompleted < 1.0 then
 		frame.BarAutoShot:SetWidth(maxBarWidth - maxBarWidth * percentCompleted)
 	else
